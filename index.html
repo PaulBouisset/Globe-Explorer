@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <title>Globe Explorer</title>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="img/fav.png">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link href='css/style.css' rel='stylesheet'/>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" async src="//platform.twitter.com/widgets.js"></script>
+  </head>
+
+  <body>
+    <header>
+        <div class="hamburger-menu">
+          <div class="bar"></div>
+        </div>
+        <nav>
+          <li id="nav_about"> about</li>
+          <li id="nav_share"> Share your globe</li>
+          <li id="nav_new"><a>New Globe</a></li>
+        </nav>
+    </header>
+
+
+<section id="accessShare_page">
+  <div class="page_background"></div>
+  <div class="accessShare_container">
+    <p class="init_instruction">Someone shared with you : </p>
+    <p id="accessShare_name"></p>
+    <p class="about_text">Start exploring this dataset and create your own globe with your data</p>
+    <button class="accessShare_button">Start</button>
+  </div>
+</section>
+
+<section id="share_page">
+  <div class="page_background"></div>
+  <div class="share_container">
+    <p class="init_instruction">Share your globe with everyone : </p>
+    <input type="text" class="share_link"> </input>
+    <ul class="share_links">
+    </ul>
+    <button class="share_close">Ok</button>
+  </div>
+</section>
+
+<section id="about_page">
+  <div class="page_background"></div>
+  <div class="about_container">
+    <p class="about_text">Globe Explorer is an open tool for exploring your google docs geographic files. It was developped as a personnal project and experiment.</p>
+    <p class="about_instruction">This project was developed by :</p>
+    <p class="about_me">Paul Bouisset</p>
+    <a target="_blank" href="http://www.paulbouisset.com">www.paulbouisset.com</a></br>
+    <a target="_blank"  href="mailto:paul-bouisset@orange.fr">paul-bouisset@orange.fr</a>
+  </div>
+</section>
+
+
+<section id="init_page">
+  <div class="container_init">
+    <img class="init_logo" src="img/logo.png"/>
+    <h1>Data Globe Explorer</h1>
+    <p class="init_subtitle">Explore your Google sheets data</p>
+    <p class="init_instruction">"Publish on web" and insert your Google sheet url here:</p>
+    <form>
+      <input id="init_input" type="text" placeholder="Google sheets link" value="https://docs.google.com/spreadsheets/d/185UpX6CL0ttnTHGAyoiLkKzmXhKajrQU-PCcVd1y-Qo/edit#gid=0">
+      <img src="img/sheets_logo.png"/>
+    </form>
+    <div class="init_instruction02">
+      <p class="init_instruction init_instruction_column">Be sure that your doc has these columns :</p>
+      <p class="init_instruction_columns">positions | lat | lon</p>
+    </div>
+    <button class="init_button">Start</button>
+    <div class="loading-spinner"></div>
+    <p class="init_instruction" id="init_scale_label">Choose the column for the size:</p>
+    <ul class="init_scale_list">
+    </ul>
+  </div>
+</section>
+
+  <nav>
+  <a href="www.paulbouisset.com"></a>
+</nav>
+
+<section id="data_container" class="">
+  <div id="title">
+    <h1 id="title_doc">Globe Exploration</h1>
+    <div id="title_line"></div>
+  </div>
+  <div class="country_wrap">
+  </div>
+  <div id="data_wrap">
+    <div id="data_block_1">
+    </div>
+    <div id="data_block_2">
+    </div>
+  </div>
+</section>
+<div id="container"></div>
+<section id="credit_container">
+  <a class="credits_links" target ="_blank" href="http://www.paulbouisset.com">Paul Bouisset | </a>
+  <a class="credits_links" target ="_blank" href="https://www.chromeexperiments.com/globe">Experiment Webgl Globe</a>
+</section>
+</body>
+
+  <script type="text/javascript" src="third-party/Detector.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r72/three.js"></script>
+  <script type="text/javascript" src="third-party/Tween.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script type="text/javascript" src="js/globe.js"></script>
+  <script type="text/javascript" src="js/animation.js"></script>
+  <script type="text/javascript" defer src="js/init.js"></script>
